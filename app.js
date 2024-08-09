@@ -12,20 +12,17 @@ function calcular(){
     let tituloRegistro = document.getElementById("titulo-registro")
     let itemDiv = document.createElement("div")
     let materialDiv = document.createElement("div")
-
-    let ultimoResultado = listaResultado[listaResultado.length - 1];
-    let ultimoMaterial = listaMaterial[listaMaterial.length - 1];
     
     if (listaResultado.length < 4){
         itemDiv = document.createElement("div")
         itemDiv.className = "item-resultado";
 
-        itemDiv.textContent = `${ultimoResultado.toFixed[0]} unidades`;
+        itemDiv.textContent = `${listaResultado[listaResultado.length - 1]} unidades`;
 
         materialDiv = document.createElement("div")
         materialDiv.className = "item-material";
     
-        materialDiv.textContent = ultimoMaterial;
+        materialDiv.textContent = listaMaterial[listaMaterial.length - 1]
 
         campoRegistro.appendChild(itemDiv);
         campoRegistro.appendChild(materialDiv);
