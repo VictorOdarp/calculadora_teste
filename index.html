@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de materiais</title>
+</head>
+<body>
+    <div class="container-card-calculo">
+        <div class="card-calculo">
+            <h1>Calculadora de quantidades</h1>
+            <p>Digite o nome da matéria prima</p>
+            <input class="input_materia" id="nome_materia" type="text">
+            <p>Digite o comprimento da matéria prima (CM)</p>
+            <input id="comprimento_material" type="number">
+            <p>Digite o comprimento do produto pronto (CM)</p>
+            <input id="comprimento_produto" type="number">
+            <br>
+            <button onclick="calcular()">Calcular</button> 
+            <button onclick="resetar()">Resetar</button>
+
+            <div class="container-card-resultado">
+                <div class="card-resultado">
+                    <h2>Resultado</h2>
+                    <output id="output_resultado"></output>
+                </div>
+            </div>
+        </div>  
+        
+        <div id="registro" class="card-registro">
+            <h1 id="titulo-registro">Registro</h1>
+        </div>  
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

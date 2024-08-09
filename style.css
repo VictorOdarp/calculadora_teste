@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container-card-calculo{
+    width: 1000px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42vh;
+}
+
+.container-card-calculo .card-calculo{
+    padding: 0px 15px;
+    background-color: grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.container-card-calculo .card-calculo h1{
+    margin: 20px;
+}
+
+.container-card-calculo input{
+    width: 80%;
+    border-radius: 5px;
+}
+
+.container-card-calculo .card-registro{
+    background-color: brown;
+    width: 350px;
+    border-radius: 10px;
+    height: 340px;
+    text-align: center;
+}
+
+.container-card-calculo .card-registro h1{
+    margin: 20px;
+}
+
+.item-resultado{
+    margin: 5px;
+    padding: 4px;
+}
+
+.item-material{
+    margin: 5px;
+    padding: 4px;
+}
+
+.container-card-calculo button{
+    margin-top: 2%;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.container-card-resultado{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container-card-resultado .card-resultado{
+    background-color: grey;
+    text-align: center;
+    border-radius: 10px;
+    height: 90px;
+}
+
+.container-card-resultado .card-resultado h2{
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .container-card-resultado{
+        margin-top: 15%;
+    }    
+}
