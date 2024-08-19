@@ -9,15 +9,15 @@ function calcular(){
     listaMaterial.push(nomeMateria);
     listaResultado.push(resultado);
     let campoRegistro = document.getElementById ("registro");
-    let tituloRegistro = document.getElementById("titulo-registro")
+    
     let itemDiv = document.createElement("div")
     let materialDiv = document.createElement("div")
     
-    if (listaResultado.length < 4){
+    if (listaResultado.length < 5){
         itemDiv = document.createElement("div")
         itemDiv.className = "item-resultado";
 
-        itemDiv.textContent = `${listaResultado[listaResultado.length - 1]} unidades`;
+        itemDiv.textContent = `${listaResultado[listaResultado.length - 1].toFixed(0)} unidades`;
 
         materialDiv = document.createElement("div")
         materialDiv.className = "item-material";
@@ -28,14 +28,13 @@ function calcular(){
         campoRegistro.appendChild(materialDiv);
         console.log(listaResultado)
     }
-    else if (listaResultado.length == 4){
+    else if (listaResultado.length == 5){
         campoRegistro.innerHTML = "";
-        campoRegistro.appendChild(tituloRegistro);
 
         itemDiv = document.createElement("div")
         itemDiv.className = "item-resultado";
 
-        itemDiv.textContent = listaResultado[listaResultado.length - 1];
+        itemDiv.textContent = `${listaResultado[listaResultado.length - 1].toFixed(0)} unidades`;
 
         materialDiv = document.createElement("div")
         materialDiv.className = "item-material";
@@ -57,8 +56,14 @@ function resetar(){
     document.getElementById("comprimento_produto").value = null;
     document.querySelector("output").value = "";
     resultado = null;
+    listaResultado = [];
     let campoRegistro = document.getElementById ("registro");
     campoRegistro.innerHTML = "";
+
+    tituloRegistro = document.createElement("h1")
+    tituloRegistro.className = "titulo-registro";
+    tituloRegistro.textContent = "Registro"
+    campoRegistro.appendChild(tituloRegistro);
 }
 
 let listaResultado = [];
